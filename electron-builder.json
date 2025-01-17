@@ -1,0 +1,37 @@
+{
+    "productName": "Img-Cross-Hair",
+    "appId": "SnhAenIgseAl",
+    "copyright": "Copyright © 2025",
+    "compression": "maximum",
+    "asar": true,
+    "directories": {
+        "output": "release/${version}"
+    },
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "perMachine": true,
+        "deleteAppDataOnUninstall": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "shortcutName": "ElectronVite4Vue3"
+    },
+    "win": {
+        "icon": "./public/vite.svg",
+        "artifactName": "${productName}-v${version}-${platform}-${arch}-setup.${ext}",
+        "target": [
+            {
+                "target": "nsis",
+                "arch": ["ia32"]
+            }
+        ]
+    },
+    "mac": {
+        "icon": "./public/vite.svg",
+        "artifactName": "${productName}-v${version}-${platform}-${arch}-setup.${ext}"
+    },
+    "linux": {
+        "icon": "./public",
+        "artifactName": "${productName}-v${version}-${platform}-${arch}-setup.${ext}"
+    }
+}
